@@ -34,8 +34,9 @@ This capstone was built end-to-end with real AWS services where sandbox permissi
 - 2 matplotlib charts generated from the structured dataset
 
 **How to run:**
-pip install -r requirements.txt
-python scripts/test_s3_connection.py
-python scripts/test_bedrock.py
-python scripts/process_pdf.py
-python scripts/query_layer.py
+
+- pip install -r requirements.txt
+- python scripts/test_s3_connection.py
+- python scripts/test_bedrock.py
+- python scripts/process_pdf.py
+- python scripts/query_layer.py
