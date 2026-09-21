@@ -1,0 +1,7 @@
+product,month,revenue,customer_id,churned
+Widget A,2026-01,12000,1,0
+Widget A,2026-02,15000,1,0
+Widget B,2026-01,8000,2,1
+Widget B,2026-02,9500,2,1
+Widget C,2026-01,20000,3,0
+Widget C,2026-02,21000,3,0

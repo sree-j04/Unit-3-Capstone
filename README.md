@@ -17,6 +17,12 @@ This capstone was built end-to-end with real AWS services where sandbox permissi
 - **OpenSearch → local JSON vector store** (`vector_store.json`) with cosine-similarity search: OpenSearch domain provisioning was skipped to fit the available time; the same retrieval logic (embed query, find nearest chunks) is implemented locally.
 - **Glue + Redshift → SQLite `sales` table**: structured data loading and querying logic (validated SQL, schema-aware) mirrors what would run against Redshift.
 
+**Written but not executed (permission constrained):**
+
+- `lambda/lambda_function.py` — real Lambda trigger logic; not deployed because packaging sentence-transformers for Lambda needs container images/layers beyond the available time. The same logic was verified working as a local script.
+- `scripts/glue_setup.py` — Glue Crawler + ETL job setup; not executed due to time constraints and the same class of IAM/KMS permission issues hit on RDS.
+- CSV upload to S3 (`raw-structured/`) was attempted via `scripts/upload_structured_data.py` and failed with AccessDenied — this IAM user's programmatic access does not have S3 PutObject permission on this bucket (console access differs from CLI credentials).
+
 **Required features implemented and tested:**
 
 - SQL validation layer blocking DROP/DELETE/UPDATE/INSERT/ALTER/TRUNCATE/GRANT/REVOKE and non-SELECT queries, tested against 7 cases including a stacked-query injection attempt

@@ -226,8 +226,15 @@ if __name__ == "__main__":
 
     test_queries = [
         "What was the total revenue for Widget A?",
+        "What was the total revenue for Widget B?",
+        "Which product had the highest revenue?",
+        "How many customers churned?",
+        "What is the average monthly revenue across all products?",
         "What experience does the person in the document have?",
+        "What skills are listed in the document?",
+        "What is the person's educational background?",
         "Does our current customer churn rate align with what our documented retention strategy says we should be seeing?",
+        "Based on our data governance policy documents, are any of the currently-ingested datasets missing required metadata fields (check against the Glue Catalog)?",
     ]
 
     for q in test_queries:
