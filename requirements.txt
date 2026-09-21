@@ -1,0 +1,7 @@
+boto3
+sentence-transformers
+psycopg2-binary
+opensearch-py
+pandas
+matplotlib
+python-dotenv
